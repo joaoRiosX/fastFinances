@@ -4,6 +4,7 @@ import { styles } from './style.js';
 import { BtnDisabled, ButtonReturn } from '../../../components/buttons';
 import CheckBox from 'expo-checkbox';
 import ImgTopReg from '../../../../assets/ImgTopReg.png';
+import { TextPrincipal, TextPrincipal2, TextSecundario } from '../../../components/Text/index.js';
 
 export default function Register({navigation}) {
   const btnDisabled = useState(false);
@@ -22,40 +23,32 @@ export default function Register({navigation}) {
         <View style={styles.BtnVoltar}>
             <ButtonReturn onPress={TelaHome} />
         </View>
-
-        <Image
+        <View>
+          <Image
             source={ImgTopReg}
             style={styles.ImgTop}
-        />
-
-        <View style={styles.viewTxtPrincipal}>
-          <Text style={{ fontSize: 16, textAlign: 'center', color: '#363F5F' }}>
-            Precisamos verificar alguns dados
-          </Text>
-          <Text style={{ fontSize: 16, textAlign: 'center', color: '#363F5F' }}>
-            antes de criar sua conta.
-          </Text>
+          />
         </View>
-        <View style={styles.viewTxtSecundario}>
-          <Text style={{ textAlign: 'center', fontSize: 13, color: '#363F5F' }}>
-            Leva só alguns minutos.
-          </Text>
+        <View >
+          <TextPrincipal text="Precisamos verificar alguns dados"/>
         </View>
-
-      <View style={styles.checkBoxContainer}>
+        <View style={{bottom: 20}}>
+          <TextPrincipal2 text="antes de criar sua conta."/>          
+        </View>
+        <View style={{bottom: 20}}>
+          <TextSecundario text="Leva so alguns minutos"/>
+        </View>
+      <View style={{flexDirection: 'column', top: 107 }}>
         <CheckBox
           value={isSelected}
           onValueChange={setSelection}
           style={{borderRadius: 5, width: 15, height: 15}}
         />
         <Text style={{left: 24, bottom: 33}}>Aceito os<Text style={{color: '#53A0E7'}}> Termos e condiçoes</Text> e autorizo o uso{'\n'}
-           de meus dados de acordo com a <Text style={{color: '#53A0E7'}}>Declaraçao{'\n'}
-           de privacidade</Text>
+          de meus dados de acordo com a <Text style={{color: '#53A0E7'}}>Declaraçao{'\n'}
+          de privacidade</Text>
         </Text>
-      </View>
-
-      <View style={styles.BtnAva}>
-        <BtnDisabled isDisabled={!isSelected} text="Avançar" onPress={TelaVerificaçao} />
+        <BtnDisabled isDisabled={!isSelected} text="Avançar" onPress={TelaVerificaçao} />   
       </View>
     </View>
   );

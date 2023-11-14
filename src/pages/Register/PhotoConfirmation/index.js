@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import {View, Image } from 'react-native';
 import { styles } from './style.js';
 import { Button1, ButtonReturn } from '../../../components/buttons';
 import ImgTop from './assets/ImgTop.png'
+import { TextPrincipal , TextPrincipal2, TextSecundario } from '../../../components/Text';
 
 export default function PhotoConfirmation({navigation}){
 
@@ -23,14 +24,14 @@ return(
             source={ImgTop}
             style={styles.ImgTop}
         />
-
-    <View style={styles.viewTxtPrincipal}>
-     <Text style={{ fontSize: 16, textAlign: 'center', color: '#363F5F', fontWeight: 'bold' }}>Sua foto está ótima.{'\n'}
-        Quanta beleza</Text>
+    <View>
+        <TextPrincipal text="sua foto está ótima" />
     </View>
-
-    <View style={styles.viewTxtSecundario}>
-        <Text style={{ textAlign: 'center', fontSize: 12, color: '#363F5F' }}>Falta só mais uma etapa para criar sua conta.</Text>
+    <View style={{bottom: 20}}>
+     <TextPrincipal2 text="Quanta beleza"/>
+    </View>
+    <View style={{bottom: 20}}>
+    <TextSecundario text="Falta só mais uma etapa para criar sua conta."/>
     </View>
 
     <View style={styles.BtnAva}>

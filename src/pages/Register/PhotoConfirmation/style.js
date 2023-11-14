@@ -21,14 +21,7 @@ export const styles = {
         width: 223,
         left: 19,
       },
-      viewTxtPrincipal: {
-        justifyContent: 'center',
-        marginVertical: 10, // Ajuste a margem vertical conforme necessário
-      },
+     
     
-      viewTxtSecundario: {
-        justifyContent: 'center',
-        bottom: 24,
-        marginVertical: 16, // Ajuste a margem vertical conforme necessário
-      }
+
     }

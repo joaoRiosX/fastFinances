@@ -6,14 +6,16 @@ import ImgTop from './assets/ImgTop.png'
 
 export default function TelaVincular({navigation}) {
   
-  const Google = () => {
-    // Função de manipulação para o botão do Google
-  };
+  // const Google = () => {
+  //   // Função de manipulação para o botão do Google
+  // };
  
-  const Apple = () => {
-    // Função de manipulação para o botão da Apple
+  // const Apple = () => {
+  //   // Função de manipulação para o botão da Apple
+  // }
+  function TelaInicial(){
+    navigation.navigate('TelaInicial')
   }
-
   function TelaHome(){
     navigation.navigate('Home')
   }
@@ -25,10 +27,12 @@ export default function TelaVincular({navigation}) {
         <ButtonReturn onPress={TelaHome} />
       </View>
 
-      <Image
-        source={ImgTop}
-        style={styles.ImgTop}
-      />
+      <View>
+        <Image
+          source={ImgTop}
+          style={styles.ImgTop}
+        />
+      </View>
 
       <View style={styles.TxtPrincipal}>
         <Text style={{ fontSize: 16, textAlign: 'center', color: '#363F5F', fontWeight: 'bold' }}>Vamos vincular suas{'\n'}
@@ -38,13 +42,14 @@ export default function TelaVincular({navigation}) {
 
       <View style={styles.TxtSecundario}>
         <Text style={{ fontSize: 12, textAlign: 'center', color: '#363F5F' }}>Sua foto de perfil será vinculada
-        ao nosso app</Text>
+          ao nosso app</Text>
       </View>
 
-      <ButtonGoogle text="Entrar com google" onPress={Google} />
-      <ButtonApple text="Entrar com Apple" onPress={Apple} />
-
+      <View style={{flexDirection: 'column', bottom: 50}}>
+        <ButtonGoogle text="Entrar com google" onPress={TelaInicial} />
+        <ButtonApple text="Entrar com Apple" onPress={TelaInicial} />
       </View>
+    </View>
   );
 
 }

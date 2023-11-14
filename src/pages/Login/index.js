@@ -5,12 +5,12 @@ import  ImgTopLog from "../../../assets/ImgTopLog.png";
 import { ButtonApple, ButtonGoogle, ButtonReturn } from '../../components/buttons';
 
 export default function Login({navigation}) {
-  const Google = () => {
-    // Função de manipulação para o botão do Google
-  };
+  function Google (){
+    navigation.navigate('TelaInicial')
+  }
  
-  const Apple = () => {
-    // Função de manipulação para o botão da Apple
+  function Apple(){
+    navigation.navigate('TelaInicial')
   }
 
   function TelaHome(){

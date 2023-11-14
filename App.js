@@ -8,7 +8,8 @@ import * as Font from 'expo-font'
 import PhotoVerification from './src/pages/Register/photoVerification';
 import PhotoConfirmation from './src/pages/Register/PhotoConfirmation';
 import TelaVincular from './src/pages/Register/Vincular';
-
+import TelaInicial from './src/pages/Inicio';
+import TelaCadastrar from './src/pages/Cadastrar';
 const Stack = createNativeStackNavigator();
 
 
@@ -22,6 +23,8 @@ function Navigator(){
         <Stack.Screen name='PhotoVerification' component={PhotoVerification}/>
         <Stack.Screen name='PhotoConfirmation' component={PhotoConfirmation}/>
         <Stack.Screen name='TelaVincular' component={TelaVincular}/>
+        <Stack.Screen name='TelaInicial' component={TelaInicial}/>
+        <Stack.Screen name='TelaCadastrar' component={TelaCadastrar}/>
       </Stack.Navigator>
   )
 }

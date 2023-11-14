@@ -3,7 +3,7 @@ import ImgCentral from '../../../assets/ImgCentral.png';
 import Cifrao from '../../../assets/Cifrao.png';
 import { Button1, Button2 } from '../../components/buttons';
 import {styles} from "./style"
-import { Image, Text, View} from 'react-native';
+import { Image, StatusBar, Text, View} from 'react-native';
 
 export default function Home({navigation}){
 
@@ -15,6 +15,7 @@ function TelaRegister(){
 }
 
 return(
+
     <View style={styles.container}>
         <View>
             <Image
@@ -54,5 +55,6 @@ return(
         <Button2 text="cadastrar" onPress={TelaRegister}/> 
       </View>
     </View>
+
 );
 }
